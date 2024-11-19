@@ -1,8 +1,7 @@
-export const Layout = ({ children, sidebar }) => {
+export const Layout = ({ children }) => {
   return (
     <div>
       <header>HEADER</header>
-      {sidebar}
       {children}
       <footer>FOOTER</footer>
     </div>
