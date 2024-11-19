@@ -3,20 +3,32 @@ import { restaurants } from "../mock/mock.js";
 import { useState } from "react";
 
 export const RestaurantsPage = () => {
-  const [selectedRestaurant, setSelectedRestaurant] = useState(restaurants[0]);
+  const { name, menu, reviews } = restaurants[0];
+  const [selectedRestaurant, setSelectedRestaurant] = useState({
+    name,
+    menu,
+    reviews,
+  });
 
-  const restaurantSelect = (restaurant) => {
-    setSelectedRestaurant(restaurant);
+  const restaurantSelect = ({ name, menu, reviews }) => {
+    setSelectedRestaurant((selectedRestaurant) => {
+      return {
+        ...selectedRestaurant,
+        name: name,
+        menu: menu,
+        reviews: reviews,
+      };
+    });
   };
 
   return (
     <div>
-      {restaurants.map((restaurant) => (
+      {restaurants.map(({ name, menu, reviews }) => (
         <button
-          key={restaurant.id}
-          onClick={() => restaurantSelect(restaurant)}
+          key={name}
+          onClick={() => restaurantSelect({ name, menu, reviews })}
         >
-          {restaurant.name}
+          {name}
         </button>
       ))}
       <Restaurant restaurant={selectedRestaurant} />
