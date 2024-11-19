@@ -11,9 +11,9 @@ export const RestaurantsPage = () => {
   });
 
   const restaurantSelect = ({ name, menu, reviews }) => {
-    setSelectedRestaurant((currentRestaurant) => {
+    setSelectedRestaurant((selectedRestaurant) => {
       return {
-        ...currentRestaurant,
+        ...selectedRestaurant,
         name: name,
         menu: menu,
         reviews: reviews,
