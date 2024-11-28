@@ -1,17 +1,16 @@
 import { useProgressBar } from "./use-progress-bar";
+import styles from "./progress-bar.module.css";
+import classNames from "classnames";
 
 export const ProgressBar = () => {
-  const withPrecent = useProgressBar();
+  const widthPercent = useProgressBar();
 
   return (
     <div
+      className={classNames(styles.progressBar)}
       style={{
-        width: withPrecent,
-        position: "fixed",
-        height: "8px",
-        top: "0px",
-        backgroundColor: "#FF0000",
+        width: widthPercent,
       }}
-    ></div>
+    />
   );
 };

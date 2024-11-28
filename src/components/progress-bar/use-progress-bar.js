@@ -12,11 +12,11 @@ const getScrollPercent = () => {
 };
 
 export const useProgressBar = () => {
-  const [withPrecent, setWithPrecent] = useState(0);
+  const [widthPercent, setWidthPercent] = useState(0);
 
   useEffect(() => {
     const scrollPersent = () => {
-      setWithPrecent(getScrollPercent());
+      setWidthPercent(getScrollPercent());
     };
 
     window.addEventListener("scroll", scrollPersent);
@@ -25,6 +25,5 @@ export const useProgressBar = () => {
     };
   }, []);
 
-  console.log(withPrecent);
-  return withPrecent;
+  return widthPercent;
 };

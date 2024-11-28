@@ -8,6 +8,7 @@ export const useCount = () => {
       setValue(value + 1);
     }
   };
+
   const decrease = () => {
     if (value > 0 && value <= 5) {
       setValue(value - 1);

@@ -1,0 +1,19 @@
+.restaurantPage {
+  background-color: rgb(255, 237, 213);
+}
+
+.button {
+  color: rgb(30, 30, 30);
+  background-color: rgb(255, 223, 181);
+  width: 25%;
+  height: 40px;
+  border: 3px solid;
+  border-radius: 12px;
+  cursor: pointer;
+  font: 20px "Dancing Script", fantasy;
+}
+
+.button:hover {
+  background-color: gray;
+  transition-duration: 0.5s;
+}

@@ -1,0 +1,11 @@
+.restaurantHeader {
+  font: bold 60px "Brush Script MT", cursive;
+  color: rgb(30, 30, 30);
+  text-align: center;
+}
+
+.restaurantReviews {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
