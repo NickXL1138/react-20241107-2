@@ -1,0 +1,27 @@
+.count {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.spanStyle {
+  font-family: "Brush Script MT", cursive;
+  font-size: x-large;
+  padding: 10px;
+}
+
+.button {
+  background-color: rgb(255, 237, 213);
+  border: 3px solid #303030;
+  border-radius: 12px;
+  padding: 5px 10px;
+  width: 35px;
+  font-size: 16px;
+  transition-duration: 0.4s;
+  cursor: pointer;
+}
+
+.button:hover {
+  background-color: gray;
+  transition-duration: 0.5s;
+}

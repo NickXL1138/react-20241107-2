@@ -1,0 +1,13 @@
+.footer {
+  background: linear-gradient(rgb(255, 237, 213), rgb(255, 223, 181));
+  display: flex;
+  height: 100px;
+  align-items: center;
+  justify-content: center;
+}
+
+.contacts {
+  font: 30px "Dancing Script", fantasy;
+  color: rgb(30, 30, 30);
+  text-shadow: #000 1px 1px 0.5rem;
+}
