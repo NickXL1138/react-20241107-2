@@ -1,9 +1,8 @@
 import { Restaurant } from "../restaurant/restaurant.jsx";
 import { restaurants } from "../../mock/mock.js";
+import { Button } from "../button/button.jsx";
 import { useState } from "react";
-
 import styles from "./restaurants-page.module.css";
-import classNames from "classnames";
 
 export const RestaurantsPage = () => {
   const [selectedRestaurant, setSelectedRestaurant] = useState(restaurants[0]);
@@ -13,16 +12,15 @@ export const RestaurantsPage = () => {
   };
 
   return (
-    <div className={classNames(styles.restaurantPage)}>
+    <div className={styles.restaurantPage}>
       {restaurants.map((restaurant) => (
         <>
-          <button
-            className={classNames(styles.button)}
-            key={restaurant.id}
+          <Button
             onClick={() => restaurantSelect(restaurant)}
+            viewVariant="restaurantsPage"
           >
             {restaurant.name}
-          </button>
+          </Button>
         </>
       ))}
       <Restaurant restaurant={selectedRestaurant} />

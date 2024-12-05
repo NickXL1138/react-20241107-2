@@ -1,10 +1,20 @@
-.header {
+.div {
   background-image: url("./header.jpg");
-  display: flex;
   height: 200px;
   align-items: center;
+  display: grid;
+  justify-content: center;
+}
+
+.header {
+  display: flex;
   justify-content: center;
   font: bold 70px "Dancing Script", fantasy;
   color: #0ecf00;
   text-shadow: #000 10px 10px 0.5rem;
+}
+
+.switchButton {
+  display: flex;
+  justify-content: center;
 }
