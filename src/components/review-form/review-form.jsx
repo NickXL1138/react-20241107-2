@@ -1,8 +1,7 @@
 import { Count } from "../count/count";
+import { Button } from "../button/button";
 import { useForm } from "./use-form";
-
 import styles from "./review-form.module.css";
-import classNames from "classnames";
 
 export const ReviewForm = () => {
   const { form, setName, setText, increaseRating, decreaseRating, clearForm } =
@@ -10,31 +9,28 @@ export const ReviewForm = () => {
   const { name, text, rating } = form;
 
   return (
-    <form
-      className={classNames(styles.form)}
-      onSubmit={(e) => e.preventDefault()}
-    >
-      <h3 className={classNames(styles.header)}>Оcтавить отзыв</h3>
+    <form className={styles.form} onSubmit={(e) => e.preventDefault()}>
+      <h3 className={styles.header}>Оcтавить отзыв</h3>
       <div>
-        <span className={classNames(styles.span)}>Имя</span>
+        <span className={styles.spanText}>Имя</span>
         <input
-          className={classNames(styles.input)}
+          className={styles.input}
           type="text"
           value={name}
           onChange={(event) => setName(event.target.value)}
         ></input>
       </div>
       <div>
-        <span className={classNames(styles.span)}>Текст</span>
+        <span className={styles.spanText}>Текст</span>
         <input
-          className={classNames(styles.input)}
+          className={styles.input}
           type="text"
           value={text}
           onChange={(event) => setText(event.target.value)}
         ></input>
       </div>
-      <div className={classNames(styles.rating)}>
-        <span className={classNames(styles.spanRating)}>Оценка</span>
+      <div className={styles.ratingContainer}>
+        <span className={styles.spanRatingText}>Оценка</span>
         <Count
           value={rating}
           increase={increaseRating}
@@ -42,9 +38,9 @@ export const ReviewForm = () => {
         />
       </div>
       <div>
-        <button className={classNames(styles.button)} onClick={clearForm}>
+        <Button onClick={clearForm} viewVariant="reviewForm">
           clear
-        </button>
+        </Button>
       </div>
     </form>
   );

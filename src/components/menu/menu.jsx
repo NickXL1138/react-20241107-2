@@ -1,16 +1,18 @@
-import { DishCount } from "../count/dish-count";
+import { DishCount } from "../dish-count/dish-count";
+import { useAuth } from "../auth-context/use-auth";
 import styles from "./menu.module.css";
-import classNames from "classnames";
 
 export const Menu = ({ menu }) => {
+  const { isAuth } = useAuth();
+
   return (
-    <div className={classNames(styles.menu)}>
-      <h3 className={classNames(styles.header)}>Меню</h3>
+    <div className={styles.menuContainer}>
+      <h3 className={styles.menuHeader}>Меню</h3>
       <ul>
         {menu.map(({ id, name }) => (
-          <li key={id} className={classNames(styles.listItem)}>
+          <li key={id} className={styles.listItem}>
             {name}
-            <DishCount />
+            {isAuth.name && <DishCount />}
           </li>
         ))}
       </ul>
