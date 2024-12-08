@@ -6,7 +6,7 @@ export const ProgressBar = () => {
 
   return (
     <div
-      className={styles.progressBar}
+      className={styles.progressBarContainer}
       style={{
         width: widthPercent,
       }}

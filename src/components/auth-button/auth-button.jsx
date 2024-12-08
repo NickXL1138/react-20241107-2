@@ -3,20 +3,14 @@ import { useAuth } from "../auth-context/use-auth";
 import styles from "./auth-button.module.css";
 
 export const AuthButton = () => {
-  const { isAuth, setIsAuth } = useAuth();
-
-  const toggleAuth = () => {
-    if (!isAuth.isAuthorized) {
-      setIsAuth({ isAuthorized: true, name: "Anon" });
-    } else {
-      setIsAuth({ isAuthorized: false });
-    }
-  };
+  const { isAuth, toggleAuth } = useAuth();
 
   return (
     <>
-      {isAuth.name && <span className={styles.span}>{isAuth.name}</span>}
-      <Button onClick={toggleAuth} viewVariant="switchThemeButton">
+      {isAuth.name && (
+        <span className={styles.authButtonText}>{isAuth.name}</span>
+      )}
+      <Button onClick={toggleAuth} viewVariant="headerButtons">
         {!isAuth.isAuthorized ? "Войти" : "Выйти"}
       </Button>
     </>

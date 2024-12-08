@@ -6,8 +6,8 @@ export const Menu = ({ menu }) => {
   const { isAuth } = useAuth();
 
   return (
-    <div className={styles.menu}>
-      <h3 className={styles.header}>Меню</h3>
+    <div className={styles.menuContainer}>
+      <h3 className={styles.menuHeader}>Меню</h3>
       <ul>
         {menu.map(({ id, name }) => (
           <li key={id} className={styles.listItem}>

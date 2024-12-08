@@ -1,4 +1,4 @@
-.div {
+.headerContainer {
   background-image: url("./header.jpg");
   height: 200px;
   align-items: center;
@@ -6,7 +6,7 @@
   justify-content: center;
 }
 
-.header {
+.headerText {
   display: flex;
   justify-content: center;
   font: bold 70px "Dancing Script", fantasy;
@@ -14,7 +14,7 @@
   text-shadow: #000 10px 10px 0.5rem;
 }
 
-.switchButton {
+.switchButtonContainer {
   display: flex;
   justify-content: center;
 }

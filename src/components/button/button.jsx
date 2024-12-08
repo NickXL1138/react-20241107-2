@@ -13,7 +13,7 @@ export const Button = ({ children, onClick, viewVariant = "default" }) => {
         [styles.default]: viewVariant === "default",
         [styles.restaurantsPage]: viewVariant === "restaurantsPage",
         [styles.reviewForm]: viewVariant === "reviewForm",
-        [styles.switchThemeButton]: viewVariant === "switchThemeButton",
+        [styles.headerButtons]: viewVariant === "headerButtons",
         [styles.acid]: themeValue === "acid",
       })}
     >

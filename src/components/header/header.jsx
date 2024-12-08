@@ -4,11 +4,11 @@ import { AuthButton } from "../auth-button/auth-button";
 
 export const Header = () => {
   return (
-    <div className={styles.div}>
+    <div className={styles.headerContainer}>
       <div>
-        <header className={styles.header}>ANYFOOD</header>
+        <header className={styles.headerText}>ANYFOOD</header>
       </div>
-      <div className={styles.switchButton}>
+      <div className={styles.switchButtonContainer}>
         <SwitchThemeButton />
         <AuthButton />
       </div>

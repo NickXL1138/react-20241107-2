@@ -13,7 +13,7 @@ export const SwitchThemeButton = () => {
   };
 
   return (
-    <Button onClick={toggleTheme} viewVariant="switchThemeButton">
+    <Button onClick={toggleTheme} viewVariant="headerButtons">
       Сменить тему
     </Button>
   );

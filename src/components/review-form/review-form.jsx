@@ -12,7 +12,7 @@ export const ReviewForm = () => {
     <form className={styles.form} onSubmit={(e) => e.preventDefault()}>
       <h3 className={styles.header}>Оcтавить отзыв</h3>
       <div>
-        <span className={styles.span}>Имя</span>
+        <span className={styles.spanText}>Имя</span>
         <input
           className={styles.input}
           type="text"
@@ -21,7 +21,7 @@ export const ReviewForm = () => {
         ></input>
       </div>
       <div>
-        <span className={styles.span}>Текст</span>
+        <span className={styles.spanText}>Текст</span>
         <input
           className={styles.input}
           type="text"
@@ -29,8 +29,8 @@ export const ReviewForm = () => {
           onChange={(event) => setText(event.target.value)}
         ></input>
       </div>
-      <div className={styles.rating}>
-        <span className={styles.spanRating}>Оценка</span>
+      <div className={styles.ratingContainer}>
+        <span className={styles.spanRatingText}>Оценка</span>
         <Count
           value={rating}
           increase={increaseRating}

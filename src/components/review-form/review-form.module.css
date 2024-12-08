@@ -21,19 +21,19 @@
   border-bottom: black 2px solid;
 }
 
-.span {
+.spanText {
   padding: 5px;
   font: 16px "Dancing Script", fantasy;
 }
 
-.rating {
+.ratingContainer {
   display: flex;
   border-radius: 50%;
   background-color: rgb(255, 223, 181);
   padding: 15px;
 }
 
-.spanRating {
+.spanRatingText {
   padding: 10px;
   font: 22px "Dancing Script", fantasy;
 }
