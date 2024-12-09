@@ -1,11 +1,15 @@
-import { Restaurant } from "../restaurant/restaurant.jsx";
-import { restaurants } from "../../mock/mock.js";
-import { Button } from "../button/button.jsx";
 import { useState } from "react";
 import styles from "./restaurants-page.module.css";
+import { useSelector } from "react-redux";
+import { selectRestaurantsIds } from "../../redux/entities/restaurants/restaurants-slice.js";
+import { RestaurantContainer } from "../restaurant/restaurant-container.jsx";
+import { RestaurantButtonContainer } from "../restaurant-button-container/restaurant-button-container.jsx";
 
 export const RestaurantsPage = () => {
-  const [selectedRestaurant, setSelectedRestaurant] = useState(restaurants[0]);
+  const restaurantsIds = useSelector(selectRestaurantsIds);
+  const [selectedRestaurant, setSelectedRestaurant] = useState(
+    restaurantsIds[0]
+  );
 
   const restaurantSelect = (restaurant) => {
     setSelectedRestaurant(restaurant);
@@ -13,17 +17,19 @@ export const RestaurantsPage = () => {
 
   return (
     <div className={styles.restaurantPage}>
-      {restaurants.map((restaurant) => (
+      {restaurantsIds.map((id) => (
         <>
-          <Button
-            onClick={() => restaurantSelect(restaurant)}
+          <RestaurantButtonContainer
+            key={id}
+            id={id}
+            onClick={() => restaurantSelect(id)}
             viewVariant="restaurantsPage"
           >
-            {restaurant.name}
-          </Button>
+            {id.name}
+          </RestaurantButtonContainer>
         </>
       ))}
-      <Restaurant restaurant={selectedRestaurant} />
+      <RestaurantContainer key={selectedRestaurant} id={selectedRestaurant} />
     </div>
   );
 };
