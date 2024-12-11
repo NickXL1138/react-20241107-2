@@ -1,22 +1,19 @@
 .reviewsContainer {
   display: flex;
-  padding: 50px;
-  width: 300px;
-  align-items: center;
+  margin: 50px;
 }
 
 .header {
   font: 25px "Dancing Script", fantasy;
   color: rgb(30, 30, 30);
+  text-align: center;
 }
 
 .listItem {
-  margin: 10px;
   border-radius: 5px;
   font: 16px "Dancing Script", fantasy;
   color: rgb(30, 30, 30);
   background-color: rgb(255, 223, 181);
-  width: 100%;
   list-style: none;
-  text-align: center;
+  text-align: left;
 }

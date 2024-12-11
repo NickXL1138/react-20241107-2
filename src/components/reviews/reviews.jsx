@@ -1,13 +1,14 @@
 import styles from "./reviews.module.css";
+import { ReviewContainer } from "../review-container/review-container";
 
 export const Reviews = ({ reviews }) => {
   return (
     <div className={styles.reviews}>
       <h3 className={styles.header}>Отзывы</h3>
       <ul>
-        {reviews.map(({ id, text }) => (
+        {reviews.map((id) => (
           <li className={styles.listItem} key={id}>
-            {text}
+            <ReviewContainer id={id} />
           </li>
         ))}
       </ul>
