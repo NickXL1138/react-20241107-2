@@ -17,6 +17,8 @@ import { MenuContainer } from "./components/menu/menu-container.jsx";
 import { ReviewsPage } from "./components/reviews-page/reviews-page.jsx";
 import { DishPageContainer } from "./components/dish-page/dish-page-container.jsx";
 
+console.log("comm");
+
 const router = createBrowserRouter([
   {
     path: "/",
