@@ -1,14 +1,9 @@
-import { Reviews } from "../reviews/reviews.jsx";
-import { Menu } from "../menu/menu.jsx";
-import { ReviewForm } from "../review-form/review-form.jsx";
-import { ProgressBar } from "../progress-bar/progress-bar.jsx";
-import { useAuth } from "../auth-context/use-auth.js";
-
 import styles from "./restaurant.module.css";
+import { NavLink, Outlet } from "react-router-dom";
+import classNames from "classnames";
 
 export const Restaurant = ({ restaurant }) => {
   const { name, menu, reviews } = restaurant;
-  const { isAuth } = useAuth();
 
   if (!name) {
     return null;
@@ -16,13 +11,32 @@ export const Restaurant = ({ restaurant }) => {
 
   return (
     <div>
-      <ProgressBar />
       <h2 className={styles.restaurantHeader}>{name}</h2>
-      <Menu menu={menu} />
-      <div className={styles.restaurantReviews}>
-        {Boolean(reviews.length) && <Reviews reviews={reviews} />}
-        {isAuth.name && <ReviewForm />}
+      <div className={styles.restaurantTabContainer}>
+        <NavLink
+          className={({ isActive }) =>
+            classNames(
+              styles.restaurantTab,
+              isActive && styles.restaurantTabActive
+            )
+          }
+          to="menu"
+        >
+          Меню
+        </NavLink>
+        <NavLink
+          className={({ isActive }) =>
+            classNames(
+              styles.restaurantTab,
+              isActive && styles.restaurantTabActive
+            )
+          }
+          to="reviews"
+        >
+          Отзывы
+        </NavLink>
       </div>
+      <Outlet context={{ menu: menu, reviews: reviews }} />
     </div>
   );
 };

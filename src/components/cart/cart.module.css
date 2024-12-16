@@ -1,19 +1,26 @@
-.menuContainer {
+.cartContainer {
   background: radial-gradient(rgb(255, 237, 213), rgb(255, 223, 181));
-  border-radius: 20px;
   width: 50%;
   display: block;
-  margin: 0px auto;
-  padding: 50px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
-.listItem {
+.cartHeader {
+  font: bold 30px "Brush Script MT", cursive;
+  color: rgb(30, 30, 30);
+  text-align: center;
+}
+
+.cartListItem {
   margin: 10px;
   border-radius: 10px;
+  font: 20px "Dancing Script", fantasy;
+  color: rgb(30, 30, 30);
   background-color: rgb(255, 223, 181);
   list-style: none;
   text-align: center;
-  width: 50%;
+  width: 30%;
   margin-left: auto;
   margin-right: auto;
 }
