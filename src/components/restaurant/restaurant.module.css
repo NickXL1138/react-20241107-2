@@ -4,8 +4,27 @@
   text-align: center;
 }
 
-.restaurantReviews {
+.restaurantTabContainer {
   display: flex;
   align-items: center;
   justify-content: center;
+  width: 50%;
+  margin: auto;
+}
+
+.restaurantTab {
+  cursor: pointer;
+  font-size: 16px;
+  color: rgb(30, 30, 30);
+  opacity: 50%;
+  font: bold 30px "Brush Script MT", cursive;
+  text-decoration: none;
+  margin: 0 30px;
+  border-radius: 20px;
+  background: radial-gradient(rgb(255, 223, 181), rgb(255, 237, 213));
+  text-align: center;
+}
+
+.restaurantTabActive {
+  opacity: 100%;
 }

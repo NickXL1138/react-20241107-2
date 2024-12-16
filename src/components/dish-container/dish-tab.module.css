@@ -1,0 +1,10 @@
+.tabContainer {
+  text-decoration: none;
+  font-family: "Dancing Script", fantasy;
+  color: rgb(30, 30, 30);
+}
+
+.tabHeader {
+  font-size: 25px;
+  padding: 10px 0;
+}
