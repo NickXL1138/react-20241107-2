@@ -15,7 +15,7 @@ import { HomePage } from "./components/home-page/home-page.jsx";
 import { OneRestaurantPage } from "./components/one-restaurant-page/one-restaurant-page.jsx";
 import { MenuContainer } from "./components/menu/menu-container.jsx";
 import { ReviewsPage } from "./components/reviews-page/reviews-page.jsx";
-import { DishPage } from "./components/dish-page/dish-page.jsx";
+import { DishPageContainer } from "./components/dish-page/dish-page-container.jsx";
 
 const router = createBrowserRouter([
   {
@@ -51,7 +51,7 @@ const router = createBrowserRouter([
           },
         ],
       },
-      { path: "dish/:dishId", element: <DishPage /> },
+      { path: "dish/:dishId", element: <DishPageContainer /> },
     ],
   },
 ]);
