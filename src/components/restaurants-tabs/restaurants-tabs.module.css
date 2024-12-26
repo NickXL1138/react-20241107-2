@@ -1,0 +1,15 @@
+.restaurantsTabsContainer {
+  align-items: center;
+  text-align: center;
+  margin: 80px auto;
+  background: radial-gradient(rgb(255, 223, 181), rgb(255, 237, 213));
+}
+
+.restaurantsPageHeader {
+  font: 40px "Dancing Script", fantasy;
+  text-shadow: #000 1px 1px 1rem;
+}
+
+.restaurantsTabs {
+  display: grid;
+}

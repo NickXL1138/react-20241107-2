@@ -1,0 +1,7 @@
+.loadingScreenContainer {
+  display: flex;
+  background-image: url("./sf2-zxspectrum-loading.png");
+  height: 288px;
+  width: 352px;
+  margin: auto;
+}

@@ -1,0 +1,10 @@
+.linkStyle {
+  display: flex;
+  justify-content: center;
+  font: bold 70px "Brush Script MT", cursive;
+  color: #0ecf00;
+  text-shadow: #000 10px 10px 0.5rem;
+  background-image: url("../header/header.jpg");
+  height: 1200px;
+  text-decoration: none;
+}
