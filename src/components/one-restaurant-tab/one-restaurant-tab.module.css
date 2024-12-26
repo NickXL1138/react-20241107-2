@@ -1,0 +1,12 @@
+.restaurantTab {
+  cursor: pointer;
+  font-size: 16px;
+  color: rgb(30, 30, 30);
+  font: bold 30px "Dancing Script", fantasy;
+  text-decoration: none;
+  margin: 30px auto;
+  width: 50%;
+  height: 90%;
+  border-radius: 20px;
+  background: radial-gradient(rgb(255, 223, 181), rgb(255, 237, 213));
+}

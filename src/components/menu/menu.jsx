@@ -1,13 +1,13 @@
-import { DishContainer } from "../dish-container/dish-container";
+import { DishTabContainer } from "../dish-tab-container/dish-tab-container";
 import styles from "./menu.module.css";
 
-export const Menu = ({ menu }) => {
+export const Menu = ({ dishesIds }) => {
   return (
     <div className={styles.menuContainer}>
       <ul>
-        {menu.map((id) => (
+        {dishesIds.map((id) => (
           <li key={id} className={styles.listItem}>
-            <DishContainer id={id} key={id} />
+            <DishTabContainer id={id} key={id} />
           </li>
         ))}
       </ul>

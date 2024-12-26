@@ -1,4 +1,4 @@
-import { RestaurantsPage } from "./components/restaurants-page/restaurants-page.jsx";
+import { RestaurantsPage } from "./pages/restaurants-page.jsx";
 import { Layout } from "./components/layout/layout.jsx";
 import { ThemeContextProvider } from "./components/theme-switch/theme-context.jsx";
 import { AuthContextProvider } from "./components/auth-context/auth-context.jsx";
@@ -8,14 +8,13 @@ import { store } from "./redux/store.js";
 import {
   createBrowserRouter,
   Navigate,
-  Outlet,
   RouterProvider,
 } from "react-router-dom";
-import { HomePage } from "./components/home-page/home-page.jsx";
-import { OneRestaurantPage } from "./components/one-restaurant-page/one-restaurant-page.jsx";
-import { MenuContainer } from "./components/menu/menu-container.jsx";
-import { ReviewsPage } from "./components/reviews-page/reviews-page.jsx";
-import { DishPageContainer } from "./components/dish-page/dish-page-container.jsx";
+import { OneRestaurantPage } from "./pages/one-restaurant-page.jsx";
+import { ReviewsPage } from "./pages/reviews-page.jsx";
+import { HomePage } from "./pages/home-page.jsx";
+import { MenuPage } from "./pages/menu-page.jsx";
+import { DishPage } from "./pages/dish-page.jsx";
 
 const router = createBrowserRouter([
   {
@@ -23,11 +22,7 @@ const router = createBrowserRouter([
     element: <HomePage title="All you need is anyFood()" />,
   },
   {
-    element: (
-      <Layout>
-        <Outlet />
-      </Layout>
-    ),
+    element: <Layout />,
     children: [
       {
         path: "restaurants",
@@ -43,7 +38,7 @@ const router = createBrowserRouter([
           },
           {
             path: "menu",
-            element: <MenuContainer />,
+            element: <MenuPage />,
           },
           {
             path: "reviews",
@@ -51,7 +46,7 @@ const router = createBrowserRouter([
           },
         ],
       },
-      { path: "dish/:dishId", element: <DishPageContainer /> },
+      { path: "dish/:dishId", element: <DishPage /> },
     ],
   },
 ]);
