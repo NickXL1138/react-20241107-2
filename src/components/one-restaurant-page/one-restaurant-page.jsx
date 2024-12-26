@@ -6,7 +6,7 @@ import { Button } from "../button/button";
 export const OneRestaurantPage = () => {
   const { restaurantId } = useParams();
   const navigate = useNavigate();
-  const onClick = () => navigate("../restaurants");
+  const onClick = () => navigate("/restaurants");
 
   return (
     <>
