@@ -15,6 +15,7 @@ export const Button = ({ children, onClick, viewVariant = "default" }) => {
         [styles.reviewForm]: viewVariant === "reviewForm",
         [styles.headerButtons]: viewVariant === "headerButtons",
         [styles.acid]: themeValue === "acid",
+        [styles.backToRestaurants]: viewVariant === "backToRestaurants",
       })}
     >
       {children}
